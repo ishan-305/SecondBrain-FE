@@ -1,0 +1,8 @@
+{
+  "data": { "id": 1, "name": "John Doe" }, 
+  "status": 200, 
+  "statusText": "OK",
+  "headers": { "content-type": "application/json" }, 
+  "config": { /* Request Configuration */ }, 
+  "request": { /* XMLHttpRequest or Node.js Request */ }
+}
