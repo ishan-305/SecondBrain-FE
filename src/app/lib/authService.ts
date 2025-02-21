@@ -7,8 +7,6 @@ type userData = {
 };
 
 export class AuthService {
-  private API_URL = "http://localhost:3000/api/v1/auth";
-
   async signup(userData: userData) {
     try {
       const {
@@ -36,4 +34,12 @@ export class AuthService {
 
     return data;
   }
+
+  async getUser() {
+    const { data } = await axiosInterface.get("/auth/getUser");
+    return data;
+  }
 }
+
+const authservice = new AuthService();
+export default authservice;
