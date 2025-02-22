@@ -2,19 +2,19 @@ import React from "react";
 
 export const SocialLogin = () => {
   return (
-    <section className="flex flex-col items-center">
-      <p className="mt-8 text-lg tracking-wide leading-snug text-center opacity-40 text-stone-700">
+    <section className="flex  ml-[-50px] flex-col items-center">
+      <p className="mt-3 text-lg tracking-wide leading-snug text-center opacity-40 text-stone-700">
         - or -
       </p>
-      <div className="flex gap-5 justify-between mt-6 max-w-full w-[270px]">
+      <div className="flex gap-5 mt-3 justify-between max-w-full w-[270px]">
         <button
-          className="flex gap-2.5 items-center p-4 bg-orange-50 h-[58px] rounded-[100px] w-[58px]"
+          className="flex gap-2.5 items-center p-4 bg-orange-50 h-[50px] rounded-[100px] w-[50px]"
           aria-label="Social login option 1"
         >
           <div className="flex w-7 min-h-7" />
         </button>
         <button
-          className="flex gap-2.5 items-center p-4 bg-orange-50 h-[58px] rounded-[100px] w-[58px]"
+          className="flex gap-2.5 items-center p-4 bg-orange-50 h-[50px] rounded-[100px] w-[50px]"
           aria-label="Social login option 2"
         >
           <img
@@ -25,7 +25,7 @@ export const SocialLogin = () => {
           />
         </button>
         <button
-          className="flex gap-2.5 items-center p-4 bg-orange-50 h-[58px] rounded-[100px] w-[58px]"
+          className="flex gap-2.5 items-center p-4 bg-orange-50 h-[50px] rounded-[100px] w-[50px]"
           aria-label="Social login option 3"
         >
           <img

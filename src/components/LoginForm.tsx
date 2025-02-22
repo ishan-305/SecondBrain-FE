@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import { InputField } from "./InputField";
 import { SocialLogin } from "./SocialLogin";
+import { useRouter } from "next/navigation";
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const router = useRouter();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle login logic here
@@ -16,13 +17,13 @@ export const LoginForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col my-auto max-md:max-w-full"
+      className="h-1 flex justify-center items-center flex-col my-auto max-w-full px-4"
     >
-      <h1 className="text-5xl font-bold leading-none text-center text-neutral-700 max-md:max-w-full max-md:text-4xl">
+      <h1 className="text-4xl font-bold text-center text-neutral-700 font-serif">
         Welcome Back!!
       </h1>
 
-      <div className="mt-16 max-md:mt-10">
+      <div className="mt-10">
         <InputField
           label="Email"
           type="email"
@@ -32,7 +33,7 @@ export const LoginForm = () => {
         />
       </div>
 
-      <div className="mt-12 max-md:mt-10">
+      <div className="mt-6">
         <InputField
           label="Password"
           type="password"
@@ -45,27 +46,28 @@ export const LoginForm = () => {
 
       <button
         type="button"
-        className="self-end mt-6 text-xl font-semibold tracking-wide leading-snug text-right text-zinc-600"
+        className="self-end mt-2 mr-12 text-base font-semibold text-right w-[445px] h-[18px] text-zinc-600"
       >
         Forgot Password?
       </button>
 
       <button
         type="submit"
-        className="gap-2.5 self-stretch px-2.5 py-5 mt-20 text-2xl font-semibold tracking-wide leading-snug text-yellow-800 whitespace-nowrap bg-orange-100 rounded-[128px] max-md:mt-10"
+        className="self-stretch px-2.5 ml-[18px] py-3 w-[432px] h-[74px] mt-8 text-base font-semibold text-yellow-800 bg-orange-100 rounded-[63px]"
       >
         Login
       </button>
 
       <SocialLogin />
 
-      <div className="flex gap-1 items-center self-center mt-6 max-w-full text-lg tracking-wide leading-snug w-[274px]">
-        <p className="self-stretch my-auto opacity-40 text-stone-700">
-          Don&apos;t have an account?
-        </p>
+      <div className="flex gap-1 items-center ml-[-50px] self-center mt-4 text-base text-stone-700">
+        <p className="opacity-40">Don&apos;t have an account?</p>
         <button
           type="button"
-          className="self-stretch my-auto font-semibold text-orange-400"
+          className="font-semibold text-orange-400"
+          onClick={() => {
+            router.push("/signup");
+          }}
         >
           Sign up
         </button>
