@@ -1,12 +1,14 @@
-("use client"); // Required for using hooks in App Router
+"use client"; // Required for using hooks in App Router
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Header: React.FC = () => {
+  const router = useRouter();
   const pathname = usePathname();
 
   const navItems = [
@@ -54,7 +56,11 @@ const Header: React.FC = () => {
             </li>
           ))}
         </ul>
-        <Button className="rounded-lg font-sans text-black bg-gradient-to-br from-[#AAD9D1] to-[#017373]">
+
+        <Button
+          className="rounded-lg font-sans text-black bg-gradient-to-br from-[#AAD9D1] to-[#017373]"
+          onClick={() => router.push("/signup")}
+        >
           Get Started
           <ArrowUpRight />
         </Button>
